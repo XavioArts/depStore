@@ -24,22 +24,22 @@ clothes = Dep.create(name:"Clothes", aisle_no: 50)
 # and assigning them to a variable to make it easy to add items to each department
 
 5.times do
+    name1 = Faker::Name.name
+    name2 = Faker::Verb.ing_form
+    name3 = Faker::Food.dish
+    item_name = "#{name1}'s #{name2} #{name3}"
     foods.items.create(
-        name1 = Faker::Name.name
-        name2 = Faker::Verb.ing_form
-        name3 = Faker::Food.dish
-        item_name = "#{name1}'s #{name2} #{name3}"
         name: item_name,
         body: Faker::Food.description,
     )
 end
 
 5.times do
+    name1 = Faker::Color.color_name
+    name2 = Faker::Verb.ing_form
+    name3 = Faker::Music.instrument
+    item_name = "#{name1} #{name2} #{name3}"
     toys.items.create(
-        name1 = Faker::Color.color_name
-        name2 = Faker::Verb.ing_form
-        name3 = Faker::Music.instrument
-        item_name = "#{name1} #{name2} #{name3}"
         name: item_name,
         body: Faker::Marketing.buzzwords,
     )
@@ -53,20 +53,20 @@ end
 end
 
 5.times do
+    name1 = Faker::Verb.ing_form
+    name2 = Faker::House.furniture
+    item_name = "#{name1} #{name2}"
     hardware.items.create(
-        name1 = Faker::Verb.ing_form
-        name2 = Faker::House.furniture
-        item_name = "#{name1} #{name2}"
         name: item_name,
         body: Faker::ChuckNorris.fact,
     )
 end
 
 5.times do
+    name1 = Faker::Color.color_name
+    name2 = Faker::Hipster.words(number: 2)
+    item_name = "#{name1} #{name2}"
     clothes.items.create(
-        name1 = Faker::Color.color_name
-        name2 = Faker::Hipster.words(number: 2)
-        item_name = "#{name1} #{name2}"
         name: item_name,
         body: Faker::Marketing.buzzwords,
     )
