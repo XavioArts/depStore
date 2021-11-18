@@ -25,7 +25,49 @@ clothes = Dep.create(name:"Clothes", aisle_no: 50)
 
 5.times do
     foods.items.create(
-        name:,
-        body:,
+        name1 = Faker::Name.name
+        name2 = Faker::Verb.ing_form
+        name3 = Faker::Food.dish
+        item_name = "#{name1}'s #{name2} #{name3}"
+        name: item_name,
+        body: Faker::Food.description,
+    )
+end
+
+5.times do
+    toys.items.create(
+        name1 = Faker::Color.color_name
+        name2 = Faker::Verb.ing_form
+        name3 = Faker::Music.instrument
+        item_name = "#{name1} #{name2} #{name3}"
+        name: item_name,
+        body: Faker::Marketing.buzzwords,
+    )
+end
+
+5.times do
+    elec.items.create(
+        name: Faker::Commerce.product_name,
+        body: Faker::Marketing.buzzwords,
+    )
+end
+
+5.times do
+    hardware.items.create(
+        name1 = Faker::Verb.ing_form
+        name2 = Faker::House.furniture
+        item_name = "#{name1} #{name2}"
+        name: item_name,
+        body: Faker::ChuckNorris.fact,
+    )
+end
+
+5.times do
+    clothes.items.create(
+        name1 = Faker::Color.color_name
+        name2 = Faker::Hipster.words(number: 2)
+        item_name = "#{name1} #{name2}"
+        name: item_name,
+        body: Faker::Marketing.buzzwords,
     )
 end

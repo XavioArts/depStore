@@ -9,6 +9,7 @@ const Items = (props) => {
                     <p>{item.body}</p>
                     {/* here is where links to each item will go */}
                     <a href={`/deps/${props.dep.id}/items/${item.id}`}>View item</a>
+                    <a href={`/deps/${props.dep.id}/items/${item.id}`} data-method="delete">View item</a>
                 </div>
             );
         });
