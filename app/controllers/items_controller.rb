@@ -16,6 +16,8 @@ class ItemsController < ApplicationController
     end
     ## do these first
     def create
+        @dep.items.create(name: params[:item][:name], body: params[:item][:body])
+        redirect_to [@dep,@item]
     end
 
     def edit
