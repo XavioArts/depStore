@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root "deps#index"
   # re rout the root (get "/" to:) to the index of my departments since that will
   # basically be my home page
-  resources :deps
+  resources :deps do
+    resources :items
+    # we nest the routes from items inside the deps routes
+    ## makes the items routes be appended with /deps/:dep_id/
+  end
   # link the CRUD routes for the departments controller
 end

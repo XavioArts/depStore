@@ -18,6 +18,7 @@ class DepsController < ApplicationController
         render component: "Dep", props: { dep: @dep }
         # this will go to my js that will display all department info and links
         
+        ### need to choose one (dep or items) and combine them for my show so it isnt redundant
     end
     
     def new
