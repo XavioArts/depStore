@@ -9,13 +9,14 @@ const Deps = (props) => {
             return (
                 <div>
                     <h1>{dep.name}</h1>
+                    <h4>Aisle: {dep.aisle_no}</h4>
                     {/* First we display the name of the department
                     and then generate links for each action on the deps. */}
-                    <a href={`/departments/${dep.id}`}>View Dep.</a>
+                    <a href={`/deps/${dep.id}`}>View Dep.</a>
                     <br></br>
-                    <a href={`/departments/${dep.id}/edit`}>Edit Dep.</a>
+                    <a href={`/deps/${dep.id}/edit`}>Edit Dep.</a>
                     <br></br>
-                    <a href={`/departments/${dep.id}`} data-method="delete">Delete Dep.</a>
+                    <a href={`/deps/${dep.id}`} data-method="delete">Delete Dep.</a>
                 </div>
             );
         });
@@ -29,6 +30,7 @@ const Deps = (props) => {
             {/* will insert links here*/}
             <a href="/deps/new">Create a new department</a>
             <br></br>
+            <p>View all items link will go here</p>
             <p>{displayDeps()}</p>
         </div>
     );
