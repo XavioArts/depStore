@@ -27,6 +27,8 @@ const Deps = (props) => {
             <h2>Scroll down to view departments</h2>
             <h3>Or follow one of these action links</h3>
             {/* will insert links here*/}
+            <a href="/deps/new">Create a new department</a>
+            <br></br>
             <p>{displayDeps()}</p>
         </div>
     );
