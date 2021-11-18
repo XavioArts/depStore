@@ -17,13 +17,13 @@ class DepsController < ApplicationController
     def show
         render component: "Dep", props: { dep: @dep }
         # this will go to my js that will display all department info and links
-        ## need to do
+        
     end
     
     def new
         render component: "DepsNew"
         # this will bring up a form to input new department 
-        ## need to do
+        
     end
 
     def edit
