@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
     end
 
     def edit
+        render component: "ItemEdit", props: {dep: @dep, item: @item }
     end
 
     def update
