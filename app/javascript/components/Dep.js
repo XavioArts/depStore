@@ -1,6 +1,15 @@
 import React from "react";
 
 const Dep = (props) => {
+    const renderItems = () => {
+        return props.items.map((item) => {
+            return (
+                <div>
+                    <h5>{item.name}</h5>
+                </div>
+            );
+        });
+    };
     return (
         <div>
             <h1>Department</h1>
@@ -12,7 +21,10 @@ const Dep = (props) => {
             <br></br>
             <a href="/deps">Back to home</a>
             <br></br>
-            <p>Below this section is where you will be able to see all items in a department</p>
+            <a href={`/deps/${props.dep.id}/items`}>View all Items</a>
+            <br></br>
+            <h3>Item List</h3>
+            <p>{renderItems()}</p>
         </div>
     );
 };
