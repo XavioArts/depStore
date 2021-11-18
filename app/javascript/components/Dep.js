@@ -21,7 +21,7 @@ const Dep = (props) => {
             <br></br>
             <a href="/deps">Back to home</a>
             <br></br>
-            <a href={`/deps/${props.dep.id}/items`}>View all Items</a>
+            <a href={`/deps/${props.dep.id}/items`}>Enter Department</a>
             <br></br>
             <h3>Item List</h3>
             <p>{renderItems()}</p>

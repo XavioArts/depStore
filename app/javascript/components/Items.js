@@ -18,6 +18,8 @@ const Items = (props) => {
         <div>
             <h1>Welcome to the {props.dep.name} department!</h1>
             <a href="/deps">Back to Departments</a>
+            <br></br>
+            <a href={`/deps/${props.dep.id}/items/new`}>Create a new item</a>
             <p>{renderItems()}</p>
             {/* need to add more links */}
         </div>

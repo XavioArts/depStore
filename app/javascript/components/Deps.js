@@ -32,8 +32,7 @@ const Deps = (props) => {
             {/* will insert links here*/}
             <a href="/deps/new">Create a new department</a>
             <br></br>
-            <p>View all items link will go here</p>
-            <p>{displayDeps()}</p>
+            {displayDeps()}
         </div>
     );
 };

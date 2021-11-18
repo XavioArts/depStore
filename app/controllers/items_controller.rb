@@ -7,8 +7,25 @@ class ItemsController < ApplicationController
         render component: "Items", props: { dep: @dep, items: @dep.items }
     end
 
-    
+    def show
+    end
 
+    ## do these first
+    def new
+        render component: "ItemNew", props: { dep: @dep, item: @item }
+    end
+    ## do these first
+    def create
+    end
+
+    def edit
+    end
+
+    def update
+    end
+
+    def destroy
+    end 
 
     private
 
