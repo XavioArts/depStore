@@ -12,13 +12,13 @@ const Deps = (props) => {
                     <h4>Aisle: {dep.aisle_no}</h4>
                     {/* First we display the name of the department
                     and then generate links for each action on the deps. */}
-                    <a href={`/deps/${dep.id}`}>View Dep.</a>
+                    <a href={`/deps/${dep.id}`}>View Dep. info</a>
                     <br></br>
                     <a href={`/deps/${dep.id}/edit`}>Edit Dep.</a>
                     <br></br>
                     <a href={`/deps/${dep.id}`} data-method="delete">Delete Dep.</a>
                     <br></br>
-                    <a href={`/deps/${dep.id}/items`}>View Items</a>
+                    <a href={`/deps/${dep.id}/items`}>Enter Department</a>
                 </div>
             );
         });

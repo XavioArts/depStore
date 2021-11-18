@@ -23,6 +23,8 @@ clothes = Dep.create(name:"Clothes", aisle_no: 50)
 # creating my 5 basic departments
 # and assigning them to a variable to make it easy to add items to each department
 
+## Making 5 random silly items for each department
+
 5.times do
     name1 = Faker::Name.name
     name2 = Faker::Verb.ing_form

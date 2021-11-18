@@ -8,14 +8,15 @@ class ItemsController < ApplicationController
     end
 
     def show
+        render component: "Item", props: { dep: @dep, item: @item }
     end
 
-    ## do these first
     def new
         render component: "ItemNew", props: { dep: @dep, item: @item }
     end
-    ## do these first
+    
     def create
+        ### Need to update to include error handling eventually
         @dep.items.create(name: params[:item][:name], body: params[:item][:body])
         redirect_to [@dep,@item]
     end
