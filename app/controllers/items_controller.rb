@@ -1,10 +1,10 @@
 class ItemsController < ApplicationController
-    before_action :set_sub
+    before_action :set_dep
     before_action :set_item, only: [:show, :update, :edit, :destroy]
 
     def index
         # show all items in a department
-        render component: "Items", props: { items: @dep.items }
+        render component: "Items", props: { dep: @dep, items: @dep.items }
     end
 
     
