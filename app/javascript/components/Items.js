@@ -24,7 +24,6 @@ const Items = (props) => {
             <br></br>
             <a href={`/deps/${props.dep.id}/items/new`}>Create a new item</a>
             <p>{renderItems()}</p>
-            {/* need to add more links */}
         </div>
     );
 };
