@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     end
 
     def show
+        render component: "Comment", props: {item: @item, comment: @comment}
     end
 
     def new
@@ -15,15 +16,19 @@ class CommentsController < ApplicationController
     end
 
     def create
+        ### Need to update to include error handling eventually
+        ## and sanitize my params
         @item.comments.create(author: params[:comment][:author], body: params[:comment][:body])
         redirect_to dep_item_path(@item.dep_id, @item)
     end
 
     def edit 
-
+        render component: "CommentEdit", props: { item: @item, comment: @comment }
     end
 
     def update
+        @comment.update(author: params[:comment][:author], body: params[:comment][:body])
+        redirect_to [@item,@comment]
     end
 
     def destroy

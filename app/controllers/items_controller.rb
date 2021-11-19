@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
     
     def create
         ### Need to update to include error handling eventually
+        ## and sanitize my params
         @dep.items.create(name: params[:item][:name], body: params[:item][:body])
         redirect_to [@dep,@item]
     end

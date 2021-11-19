@@ -9,6 +9,10 @@ const Comments = (props) => {
                     <h3>{comment.author}</h3>
                     <p>{comment.body}</p>
                     {/* links will go here */}
+                    <a href={`/items/${props.item.id}/comments/${comment.id}`}>View comment</a>
+                    <br></br>
+                    <a href={`/items/${props.item.id}/comments/${comment.id}/edit`}>Edit comment</a>
+                    <br></br>
                     <a href={`/items/${props.item.id}/comments/${comment.id}`} data-method="delete">Delete comment</a>
                 </div>
             );

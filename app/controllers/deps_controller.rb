@@ -35,6 +35,7 @@ class DepsController < ApplicationController
 
     def create
         ### Need to update to include error handling eventually
+        ## and sanitize my params
         # once the form is filled out you get the params and set them to a new department
         Dep.create(name: params[:dep][:name], aisle_no: params[:dep][:aisle_no])
         # I want to return to the home page to see the new department in my list of all of them
