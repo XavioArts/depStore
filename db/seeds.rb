@@ -30,10 +30,16 @@ clothes = Dep.create(name:"Clothes", aisle_no: 50)
     name2 = Faker::Verb.ing_form
     name3 = Faker::Food.dish
     item_name = "#{name1}'s #{name2} #{name3}"
-    foods.items.create(
+    item = foods.items.create(
         name: item_name,
         body: Faker::Food.description,
     )
+    2.times do 
+        item.comments.create(
+            author: Faker::Name.first_name,
+            body: Faker::Hipster.paragraph(sentence_count: 3),
+        )
+    end
 end
 
 5.times do
@@ -41,35 +47,59 @@ end
     name2 = Faker::Verb.ing_form
     name3 = Faker::Music.instrument
     item_name = "#{name1} #{name2} #{name3}"
-    toys.items.create(
+    item = toys.items.create(
         name: item_name,
         body: Faker::Marketing.buzzwords,
     )
+    2.times do 
+        item.comments.create(
+            author: Faker::Name.first_name,
+            body: Faker::Hipster.paragraph(sentence_count: 3),
+        )
+    end
 end
 
 5.times do
-    elec.items.create(
+    item = elec.items.create(
         name: Faker::Commerce.product_name,
         body: Faker::Marketing.buzzwords,
     )
+    2.times do 
+        item.comments.create(
+            author: Faker::Name.first_name,
+            body: Faker::Hipster.paragraph(sentence_count: 3),
+        )
+    end
 end
 
 5.times do
     name1 = Faker::Verb.ing_form
     name2 = Faker::House.furniture
     item_name = "#{name1} #{name2}"
-    hardware.items.create(
+    item = hardware.items.create(
         name: item_name,
         body: Faker::ChuckNorris.fact,
     )
+    2.times do 
+        item.comments.create(
+            author: Faker::Name.first_name,
+            body: Faker::Hipster.paragraph(sentence_count: 3),
+        )
+    end
 end
 
 5.times do
     name1 = Faker::Color.color_name
-    name2 = Faker::Hipster.words(number: 2)
+    name2 = Faker::Hipster.sentence
     item_name = "#{name1} #{name2}"
-    clothes.items.create(
+    item = clothes.items.create(
         name: item_name,
         body: Faker::Marketing.buzzwords,
     )
+    2.times do 
+        item.comments.create(
+            author: Faker::Name.first_name,
+            body: Faker::Hipster.paragraph(sentence_count: 3),
+        )
+    end
 end
