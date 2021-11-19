@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     ## makes the items routes be appended with /deps/:dep_id/
   end
   # link the CRUD routes for the departments controller
+
+  resources :items do
+    resources :comments
+  end
+
 end
