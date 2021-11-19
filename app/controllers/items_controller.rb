@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
     end
 
     def show
-        render component: "Item", props: { dep: @dep, item: @item }
+        render component: "Item", props: { dep: @dep, item: @item, comments: @item.comments }
     end
 
     def new

@@ -18,6 +18,7 @@ const Comments = (props) => {
     return (
         <div>
             <h1>{props.item.name}</h1>
+            <a href={`/deps/${props.item.dep_id}/items`}>Go back to items</a>
             <h2>Comments:</h2>
             {renderComments()}
             <a href={`/items/${props.item.id}/comments/new`}>Add a new comment</a>
