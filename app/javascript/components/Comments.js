@@ -25,6 +25,7 @@ const Comments = (props) => {
             <a href={`/deps/${props.item.dep_id}/items`}>Go back to items</a>
             <h2>Comments:</h2>
             {renderComments()}
+            <br></br>
             <a href={`/items/${props.item.id}/comments/new`}>Add a new comment</a>
         </div>
     );

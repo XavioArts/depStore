@@ -5,6 +5,8 @@ const Comment = (props) => {
         <div>
             <h1>View Comment</h1>
             <h4>On the {props.item.name}</h4>
+            <p>Created on: {props.item.created_at}</p>
+            <p>Last updated: {props.item.updated_at}</p>
             <h3>Author</h3>
             <h4>{props.comment.author}</h4>
             <p>{props.comment.body}</p>

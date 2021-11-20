@@ -20,6 +20,8 @@ const Item = (props) => {
             <h4>Comments:</h4>
             {renderComments()}
             <h5>Action links</h5>
+            <a href={`/items/${props.item.id}/comments`}>View/Edit/Add comments</a>
+            <br></br>
             <a href={`/deps/${props.dep.id}/items/${props.item.id}/edit`}>Edit item</a>
             <br></br>
             <a href={`/deps/${props.dep.id}/items/${props.item.id}`} data-method="delete">Delete item</a>
